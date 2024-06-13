@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="hero-section">
+      <div id="content-div">
+        <div id="balance-amount">
+          <div id="total-amount" class="amount-box">
+            <p id="total-amount-para">Balance Amount</p>
+            <p id="balance-amount-data">0.00</p>
+          </div>
+          <div id="expense-amount" class="amount-box">
+            <p id="expense-amount-para">Expense Amount</p>
+            <p id="expense-amount-data">0.00</p>
+          </div>
+        </div>
+        <div id="expense-list">
+          <div id="heading">
+            <h1>Expense List</h1>
+          </div>
+
+          <div id="list">
+            <table id="table-data">
+              <tr>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th></th>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div id="form-div">
+          <h1 id="form-div-h1">Add Expense</h1>
+
+          <form id="add-expense">
+            <div class="label-and-input">
+              <label>Description</label>
+              <input
+                type="text"
+                title="Description Of Transaction"
+                name=""
+                id="description"
+                placeholder="Description"
+              />
+            </div>
+            <div class="label-and-input">
+              <label for="">Amount</label>
+              <input
+                type="number"
+                title="Amount Of Transaction"
+                id="amount"
+                placeholder="Amount"
+              />
+            </div>
+            <div id="buttons">
+              <button id="spend">Spent</button>
+              <button id="receive">Receive</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+  <script>
+    document.querySelector("#sidepanel-icon").addEventListener("click", () => {
+      document.querySelector("#side-panel").style = "right:0;";
+    });
+
+    document.querySelector("#close-sidepanel").addEventListener("click", () => {
+      document.querySelector("#side-panel").style = "right:-50rem;";
+    });
+  </script>
+</html>
+
+
